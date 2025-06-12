@@ -4,12 +4,12 @@ import api from "../services/api";
 import SourceFilter from "../components/SourceFilter";
 import Loader from "../components/Loader";
 
-function HomePage() {
+const HomePage = () => {
   const [articles, setArticles] = useState<Article[]>([]);
   const [latestUpdates, setLatestUpdates] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedSource, setSelectedSource] = useState("all"); // Manage selected source
+  const [selectedSource, setSelectedSource] = useState("all");
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -19,12 +19,24 @@ function HomePage() {
           api.get("/articles"),
           api.get("/articles/latest"),
         ]);
-        setArticles(mainArticles.data);
-        setLatestUpdates(latest.data);
+
+        // Validate and ensure we have arrays
+        const articlesData = Array.isArray(mainArticles.data) 
+          ? mainArticles.data 
+          : mainArticles.data?.articles || mainArticles.data?.data || [];
+        
+        const latestData = Array.isArray(latest.data) 
+          ? latest.data 
+          : latest.data?.articles || latest.data?.data || [];
+
+        
+
+        setArticles(articlesData);
+        setLatestUpdates(latestData);
         setError(null);
       } catch (err) {
+        console.error('API Error:', err);
         setError("Failed to fetch articles. Please try again later.");
-        return err;
       } finally {
         setLoading(false);
       }
@@ -33,10 +45,12 @@ function HomePage() {
     fetchArticles();
   }, []);
 
-  const filteredArticles =
-    selectedSource === "all"
-      ? articles
-      : articles.filter((article) => article.source === selectedSource);
+  // Ensure articles is always an array before filtering
+  const filteredArticles = Array.isArray(articles) && selectedSource === "all"
+    ? articles
+    : Array.isArray(articles) 
+      ? articles.filter((article) => article.source === selectedSource)
+      : [];
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -57,7 +71,7 @@ function HomePage() {
       ) : (
         <>
           {/* Latest Updates Section */}
-          {latestUpdates.length > 0 && (
+          {Array.isArray(latestUpdates) && latestUpdates.length > 0 && (
             <div className="mb-12 bg-white rounded-xl shadow-lg p-6">
               <div className="flex items-center mb-6">
                 <h2 className="text-2xl font-bold text-purple-800 mr-4">
@@ -80,9 +94,7 @@ function HomePage() {
             <div className="w-24 h-1 bg-purple-700 rounded-full mt-2"></div>
           </div>
 
-          {/* {console.log(articles)}
-          {console.log('Type of articles:', typeof articles, 'Value:', articles)} */}
-          {articles.length > 0 ? (
+          {Array.isArray(articles) && articles.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {articles.map((article) => (
                 <ArticleCard key={article._id} article={article} />
@@ -104,7 +116,7 @@ function HomePage() {
               onSelect={setSelectedSource}
             />
 
-            {filteredArticles.length > 0 ? (
+            {Array.isArray(filteredArticles) && filteredArticles.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {filteredArticles.map((article) => (
                   <ArticleCard key={article._id} article={article} />
@@ -113,7 +125,7 @@ function HomePage() {
             ) : (
               <div className="text-center py-12">
                 <p className="text-gray-600 text-xl">
-                  No articles found. Please try again later.
+                  No articles found for the selected source.
                 </p>
               </div>
             )}
