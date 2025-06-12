@@ -25,7 +25,7 @@ app.use(limiter);
 
 // CORS configuration
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || "*",
+  origin: process.env.FRONTEND_URL || "http://localhost:5173",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"],
   maxAge: 86400, // 24 hours
