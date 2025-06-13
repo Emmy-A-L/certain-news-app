@@ -93,7 +93,7 @@ function ArticlePage() {
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
           
-          <div className="mt-10 pt-6 border-t border-gray-200">
+          <div className="mt-10 pt-6 border-t border-gray-200 w-[80vw]">
             <p className="text-gray-600">
               This article was sourced from {article.sourceName}. 
               You can view the original at:{' '}
@@ -101,7 +101,7 @@ function ArticlePage() {
                 href={article.url} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-purple-700 hover:underline"
+                className="text-purple-700 hover:underline w-[80vw]"
               >
                 {article.url}
               </a>

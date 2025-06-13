@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ArticleCard, { type Article } from "../components/ArticleCard";
 import api from "../services/api";
 import SourceFilter from "../components/SourceFilter";
-import Loader from "../components/Loader";
+// import Loader from "../components/Loader";
 
 const HomePage = () => {
   const [articles, setArticles] = useState<Article[]>([]);
@@ -21,21 +21,19 @@ const HomePage = () => {
         ]);
 
         // Validate and ensure we have arrays
-        const articlesData = Array.isArray(mainArticles.data) 
-          ? mainArticles.data 
+        const articlesData = Array.isArray(mainArticles.data)
+          ? mainArticles.data
           : mainArticles.data?.articles || mainArticles.data?.data || [];
-        
-        const latestData = Array.isArray(latest.data) 
-          ? latest.data 
-          : latest.data?.articles || latest.data?.data || [];
 
-        
+        const latestData = Array.isArray(latest.data)
+          ? latest.data
+          : latest.data?.articles || latest.data?.data || [];
 
         setArticles(articlesData);
         setLatestUpdates(latestData);
         setError(null);
       } catch (err) {
-        console.error('API Error:', err);
+        console.error("API Error:", err);
         setError("Failed to fetch articles. Please try again later.");
       } finally {
         setLoading(false);
@@ -46,9 +44,10 @@ const HomePage = () => {
   }, []);
 
   // Ensure articles is always an array before filtering
-  const filteredArticles = Array.isArray(articles) && selectedSource === "all"
-    ? articles
-    : Array.isArray(articles) 
+  const filteredArticles =
+    Array.isArray(articles) && selectedSource === "all"
+      ? articles
+      : Array.isArray(articles)
       ? articles.filter((article) => article.source === selectedSource)
       : [];
 
@@ -56,7 +55,9 @@ const HomePage = () => {
     <div className="container mx-auto px-4 py-8">
       {loading ? (
         <div className="flex items-center justify-center mt-44">
-          <Loader />
+          <div className="flex justify-center items-center">
+            <div className="animate-spin ease-linear rounded-full w-10 h-10 border-t-2 border-b-2 border-purple-500"></div>
+          </div>
         </div>
       ) : error ? (
         <div className="text-center py-8">
@@ -134,6 +135,6 @@ const HomePage = () => {
       )}
     </div>
   );
-}
+};
 
 export default HomePage;
