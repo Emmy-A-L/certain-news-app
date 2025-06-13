@@ -1,5 +1,4 @@
-@import 'tailwindcss';
-
+@import "tailwindcss";
 
 :root {
   --primary: #6a0dad;
@@ -12,7 +11,7 @@
 }
 
 body {
-  font-family: 'Roboto', 'Open Sans', sans-serif;
+  font-family: "Roboto", "Open Sans", sans-serif;
   background-color: var(--light);
   color: var(--dark);
 }
@@ -21,11 +20,11 @@ body {
   .btn-primary {
     @apply bg-purple-700 hover:bg-purple-800 text-white font-medium py-2 px-4 rounded-lg transition duration-200;
   }
-  
+
   .card {
     @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
-  
+
   .chip {
     @apply bg-purple-200 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full;
   }
