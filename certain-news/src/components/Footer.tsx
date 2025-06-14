@@ -6,19 +6,32 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0 text-center md:text-left">
-            <h2 className="text-2xl font-bold">NewsCentral</h2>
+            <img
+              src="/certain-news-logo-transparent.png"
+              alt="Certain news Logo"
+              className="w-12 h-12"
+            />
             <p className="text-purple-200 mt-2">
               Your centralized news platform
             </p>
           </div>
           <div className="flex space-x-4">
-            <Link to="#" className="hover:text-purple-400 text-purple-200 transition-colors">
+            <Link
+              to="#"
+              className="hover:text-purple-400 text-purple-200 transition-colors"
+            >
               About
             </Link>
-            <Link to="#" className="hover:text-purple-400 text-purple-200 transition-colors">
+            <Link
+              to="#"
+              className="hover:text-purple-400 text-purple-200 transition-colors"
+            >
               Contact
             </Link>
-            <Link to="#" className="hover:text-purple-400 text-purple-200 transition-colors">
+            <Link
+              to="#"
+              className="hover:text-purple-400 text-purple-200 transition-colors"
+            >
               Privacy
             </Link>
           </div>

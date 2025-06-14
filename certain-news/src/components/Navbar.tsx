@@ -14,7 +14,11 @@ function Navbar() {
   const navigate = useNavigate();
 
   const handleSearch = (query: string) => {
-    navigate(`/?search=${encodeURIComponent(query)}`);
+    const searchParams = new URLSearchParams();
+    if (query.trim()) {
+      searchParams.set("search", query);
+    }
+    navigate(`/search?${searchParams.toString()}`);
   };
 
   return (
@@ -22,7 +26,11 @@ function Navbar() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold">
-            NewsCentral
+            <img
+              src="/certain-news-logo-transparent.png"
+              alt="Certain news Logo"
+              className="w-12 h-12"
+            />
           </Link>
 
           {/* Desktop Navigation */}

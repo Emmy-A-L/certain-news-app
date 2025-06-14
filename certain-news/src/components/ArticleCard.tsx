@@ -16,7 +16,7 @@ export type Article = {
   url: string;
 }
 
-function ArticleCard({ article }: {article: Article}) {
+const ArticleCard = ({ article }: {article: Article}) => {
   return (
     <Link to={`/article/${article._id}`} className="card h-full block">
       {article.image ? (
@@ -26,9 +26,10 @@ function ArticleCard({ article }: {article: Article}) {
           className="w-full h-48 object-cover"
         />
       ) : (
-        <div className="bg-gray-200 border-2 border-dashed rounded-t-xl w-full h-48 flex items-center justify-center">
-          <span className="text-gray-500">No Image</span>
-        </div>
+        <img 
+        src="/certain-news-logo.png"
+        alt='Certain News Logo'
+        className="w-full h-48 object-cover" />
       )}
 
       <div className="p-4">
