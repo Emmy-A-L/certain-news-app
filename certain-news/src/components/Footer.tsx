@@ -9,7 +9,7 @@ const Footer = () => {
             <img
               src="/certain-news-logo-transparent.png"
               alt="Certain news Logo"
-              className="w-12 h-12"
+              className="w-12 h-12 mx-auto md:mx-0"
             />
             <p className="text-purple-200 mt-2">
               Your centralized news platform
