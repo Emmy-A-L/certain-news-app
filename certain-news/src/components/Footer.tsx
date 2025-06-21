@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-purple-700 mt-6 pt-6 text-center text-purple-300 text-sm">
           &copy; {new Date().getFullYear()} NewsCentral. All rights reserved. 
-          <span className="font-italic text-sm">This site was built for educational purposes only.</span>
+          <span className="italic text-sm">This site was built for educational purposes only.</span>
         </div>
       </div>
     </footer>
