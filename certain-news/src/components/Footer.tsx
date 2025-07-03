@@ -17,19 +17,19 @@ const Footer = () => {
           </div>
           <div className="flex space-x-4">
             <Link
-              to="#"
+              to="/about"
               className="hover:text-purple-400 text-purple-200 transition-colors"
             >
               About
             </Link>
             <Link
-              to="#"
+              to="/contact"
               className="hover:text-purple-400 text-purple-200 transition-colors"
             >
               Contact
             </Link>
             <Link
-              to="#"
+              to="privacy-policy"
               className="hover:text-purple-400 text-purple-200 transition-colors"
             >
               Privacy
