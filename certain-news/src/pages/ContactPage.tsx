@@ -13,32 +13,43 @@ const ContactPage = () => {
 
   useEffect(() => {
     if (!isSubmitting) return;
+    
     const sendForm = async () => {
-      try {
-        const res = await axios.post(`${import.meta.env.VITE_API_URL}/contact`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
-        if (res.status === 200 || res.status === 201) {
-          setResponseMsg(
-            "Thank you for reaching out! We'll get back to you soon."
-          );
-          setFormData({ fullName: "", email: "", message: "" });
-        } else {
-          setResponseMsg(
-            "There was an error submitting the form. Please try again later."
-          );
+        try {
+            // Axios doesn't need method, headers, or body wrapped like fetch
+            const res = await axios.post(`${import.meta.env.VITE_API_URL}/contact`, formData, {
+                headers: { "Content-Type": "application/json" }
+            });
+            
+            if (res.status === 200 || res.status === 201) {
+                setResponseMsg(
+                    "Thank you for reaching out! We'll get back to you soon."
+                );
+                setFormData({ fullName: "", email: "", message: "" });
+            } else {
+                setResponseMsg(
+                    "There was an error submitting the form. Please try again later."
+                );
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            if (axios.isAxiosError(error)) {
+                setResponseMsg(
+                    error.response?.data?.message ||
+                    "There was an error submitting the form. Please try again later."
+                );
+            } else {
+                setResponseMsg(
+                    "There was an error submitting the form. Please try again later."
+                );
+            }
+        } finally {
+            setIsSubmitting(false);
         }
-      } catch (error) {
-        setResponseMsg(`Error: ${error}`);
-      } finally {
-        setIsSubmitting(false);
-      }
     };
+    
     sendForm();
-    // eslint-disable-next-line
-  }, [isSubmitting]);
+}, [isSubmitting, formData]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
