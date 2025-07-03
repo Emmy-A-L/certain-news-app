@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { IoIosSend } from "react-icons/io";
 
@@ -14,12 +15,12 @@ const ContactPage = () => {
     if (!isSubmitting) return;
     const sendForm = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+        const res = await axios.post(`${import.meta.env.VITE_API_URL}/contact`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
         });
-        if (res.ok) {
+        if (res.status === 200 || res.status === 201) {
           setResponseMsg(
             "Thank you for reaching out! We'll get back to you soon."
           );
