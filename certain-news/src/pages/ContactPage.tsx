@@ -31,7 +31,7 @@ const ContactPage = () => {
           );
         }
       } catch (error) {
-        setResponseMsg(`Network error: ${error}`);
+        setResponseMsg(`Error: ${error}`);
       } finally {
         setIsSubmitting(false);
       }
