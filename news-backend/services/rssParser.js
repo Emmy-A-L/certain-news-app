@@ -28,12 +28,6 @@ const newsSources = [
     url: 'https://techcrunch.com/feed/',
     categories: ['technology'],
     contentSelector: '.article-content'
-  },
-  {
-    name: 'Business Insider',
-    url: 'https://markets.businessinsider.com/rss/news',
-    categories: ['business'],
-    contentSelector: 'div.collapsable-body'
   }
 ];
 

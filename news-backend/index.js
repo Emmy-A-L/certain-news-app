@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
 const fetchNews = require("./jobs/fetchNews");
 const articleRoutes = require("./routes/articles");
+const contactRoute = require("./routes/contactRoute")
 const connectDB = require("./config/db");
 require("dotenv").config();
 
@@ -41,6 +42,7 @@ connectDB().catch(console.error);
 
 // Routes
 app.use("/api/articles", articleRoutes);
+app.use("/api", contactRoute)
 
 // Global error handling middleware
 app.use((err, req, res, next) => {
