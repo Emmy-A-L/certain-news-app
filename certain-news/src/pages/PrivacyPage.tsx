@@ -33,6 +33,21 @@ const PrivacyPage = () => (
       </ul>
     </section>
 
+    <div className="my-8 mx-auto">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
+        crossOrigin="anonymous"></script>
+
+      <ins className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-3138057547675144"
+      data-ad-slot="1639159301"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
     <section className="max-w-2xl w-full bg-blue-100/60 rounded-lg shadow p-6 mb-8">
       <h2 className="text-2xl font-bold text-blue-800 mb-2">Cookies</h2>
       <p className="text-gray-800 text-lg">
@@ -47,6 +62,21 @@ const PrivacyPage = () => (
       </p>
     </section>
 
+    <div className="my-8 mx-auto">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
+        crossOrigin="anonymous"></script>
+
+      <ins className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-3138057547675144"
+      data-ad-slot="1639159301"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
     <section className="max-w-2xl w-full bg-blue-50 rounded-lg shadow p-6 mb-8">
       <h2 className="text-2xl font-bold text-blue-800 mb-2">Children's Privacy</h2>
       <p className="text-gray-800 text-lg">
@@ -54,12 +84,42 @@ const PrivacyPage = () => (
       </p>
     </section>
 
+    <div className="my-8 mx-auto">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
+        crossOrigin="anonymous"></script>
+
+      <ins className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-3138057547675144"
+      data-ad-slot="1639159301"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
     <section className="max-w-2xl w-full bg-white/80 rounded-lg shadow p-6 mb-8">
       <h2 className="text-2xl font-bold text-blue-800 mb-2">Disclaimer</h2>
       <p className="text-gray-800 text-lg">
         This site is not meant to act as an infringement of any kind. All content is intended for informational purposes only. If you believe any content violates your rights, please contact us for prompt resolution.
       </p>
     </section>
+
+    <div className="my-8 mx-auto">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
+        crossOrigin="anonymous"></script>
+
+      <ins className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-3138057547675144"
+      data-ad-slot="1639159301"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
 
     <footer className="max-w-2xl w-full text-center mt-8">
       <p className="text-gray-600 text-lg font-medium">

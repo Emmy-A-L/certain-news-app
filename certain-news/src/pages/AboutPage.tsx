@@ -15,6 +15,21 @@ const AboutPage = () => (
       </p>
     </section>
 
+    <div className="my-8 mx-auto">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
+        crossOrigin="anonymous"></script>
+
+      <ins className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-3138057547675144"
+      data-ad-slot="1639159301"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
     <section className="about-mission max-w-2xl w-full bg-blue-100/60 rounded-lg shadow p-6 mb-8">
       <div className="flex items-center mb-4">
         <img
@@ -43,6 +58,21 @@ const AboutPage = () => (
       </p>
     </section>
 
+    <div className="my-8 mx-auto">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
+        crossOrigin="anonymous"></script>
+
+      <ins className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-3138057547675144"
+      data-ad-slot="1639159301"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
     <section className="about-values max-w-2xl w-full bg-blue-50 rounded-lg shadow p-6 mb-8">
       <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
         <svg className="w-7 h-7 text-blue-500 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m4 0h-1v-4h-1m-4 0h-1v-4h-1m4 0h-1v-4h-1" /></svg>
@@ -67,6 +97,21 @@ const AboutPage = () => (
         </li>
       </ul>
     </section>
+
+    <div className="my-8 mx-auto">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
+        crossOrigin="anonymous"></script>
+
+      <ins className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-3138057547675144"
+      data-ad-slot="1639159301"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
 
     <footer className="about-footer max-w-2xl w-full text-center mt-8">
       <img

@@ -10,6 +10,7 @@ const ContactPage = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [responseMsg, setResponseMsg] = useState("");
+  const success = "Thank you for reaching out! We'll get back to you soon."
 
   useEffect(() => {
     if (!isSubmitting) return;
@@ -115,7 +116,7 @@ const ContactPage = () => {
             <span>{isSubmitting ? "" : <IoIosSend className="text-3xl" />}</span>
           </button>
           {responseMsg && (
-            <p className="text-center text-red-700 font-medium mt-4">
+            <p className={`text-center ${responseMsg === success ? "text-green-700" : "text-red-700"} font-medium mt-4`}>
               {responseMsg}
             </p>
           )}
