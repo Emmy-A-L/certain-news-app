@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ArticleCard, { type Article } from "../components/ArticleCard";
 import api from "../services/api";
-import SourceFilter from "../components/SourceFilter";
+// import SourceFilter from "../components/SourceFilter";
 // import Loader from "../components/Loader";
 
 const HomePage = () => {
@@ -9,7 +9,7 @@ const HomePage = () => {
   const [latestUpdates, setLatestUpdates] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedSource, setSelectedSource] = useState("all");
+  // const [selectedSource, setSelectedSource] = useState("all");
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -44,12 +44,12 @@ const HomePage = () => {
   }, []);
 
   // Ensure articles is always an array before filtering
-  const filteredArticles =
-    Array.isArray(articles) && selectedSource === "all"
-      ? articles
-      : Array.isArray(articles)
-      ? articles.filter((article) => article.source === selectedSource)
-      : [];
+  // const filteredArticles =
+  //   Array.isArray(articles) && selectedSource === "all"
+  //     ? articles
+  //     : Array.isArray(articles)
+  //     ? articles.filter((article) => article.source === selectedSource)
+  //     : [];
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -110,7 +110,7 @@ const HomePage = () => {
           )}
 
           {/* Render SourceFilter and pass selectedSource and setSelectedSource */}
-          <div className="flex flex-col mt-16 gap-6">
+          {/* <div className="flex flex-col mt-16 gap-6">
             <SourceFilter
               mobile
               selectedSource={selectedSource}
@@ -130,7 +130,7 @@ const HomePage = () => {
                 </p>
               </div>
             )}
-          </div>
+          </div> */}
         </>
       )}
     </div>

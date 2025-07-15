@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
 import PrivacyPage from './pages/PrivacyPage';
 import ContactPage from './pages/ContactPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/about' element={<AboutPage />} />
           <Route path='/privacy-policy' element={<PrivacyPage />} />
           <Route path='/contact' element={<ContactPage />} />
+          <Route path='*' element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </div>
