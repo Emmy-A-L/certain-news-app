@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
+// import SearchBar from "./SearchBar";
 
 const categories = [
   { name: "World", path: "world" },
@@ -11,15 +11,15 @@ const categories = [
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const handleSearch = (query: string) => {
-    const searchParams = new URLSearchParams();
-    if (query.trim()) {
-      searchParams.set("search", query);
-    }
-    navigate(`/search?${searchParams.toString()}`);
-  };
+  // const handleSearch = (query: string) => {
+  //   const searchParams = new URLSearchParams();
+  //   if (query.trim()) {
+  //     searchParams.set("search", query);
+  //   }
+  //   navigate(`/search?${searchParams.toString()}`);
+  // };
 
   return (
     <nav className="bg-purple-700 text-white sticky top-0 z-50 shadow-md">
@@ -47,9 +47,9 @@ function Navbar() {
               ))}
             </div>
 
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
               <SearchBar onSearch={handleSearch} />
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,9 +89,9 @@ function Navbar() {
               ))}
             </div>
 
-            <div className="mt-4 space-y-3">
+            {/* <div className="mt-4 space-y-3">
               <SearchBar onSearch={handleSearch} mobile />
-            </div>
+            </div> */}
           </div>
         )}
       </div>
