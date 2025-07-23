@@ -32,6 +32,9 @@ const PrivacyPage = () => (
           Non-personal information such as browser type, device, and usage data
           collected automatically for analytics and site improvement.
         </li>
+        <li>
+          Ad-related data collected through Google AdSense, including cookies and web beacons to serve relevant ads.
+        </li>
       </ul>
     </section>
 
@@ -47,36 +50,22 @@ const PrivacyPage = () => (
         </li>
         <li>To analyze site usage and enhance user experience.</li>
         <li>
+          To serve personalized ads via Google AdSense, as per Google's advertising policies.
+        </li>
+        <li>
           We do not sell or share your personal information with third parties
           except as required by law.
         </li>
       </ul>
     </section>
 
-    <div className="my-8 mx-auto">
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
-        crossOrigin="anonymous"
-      ></script>
-
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client="ca-pub-3138057547675144"
-        data-ad-slot="1639159301"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
     <section className="max-w-2xl w-full bg-blue-100/60 rounded-lg shadow p-6 mb-8">
       <h2 className="text-2xl font-bold text-blue-800 mb-2">Cookies</h2>
       <p className="text-gray-800 text-lg">
-        We may use cookies and similar technologies to enhance your browsing
-        experience. You can choose to disable cookies through your browser
-        settings, but some features of the site may not function properly.
+        We use cookies and similar technologies, including those provided by Google AdSense,
+        to enhance your browsing experience and deliver personalized ads.
+        You can disable cookies via your browser settings, but some features
+        of the site may not function properly.
       </p>
     </section>
 
@@ -91,24 +80,6 @@ const PrivacyPage = () => (
       </p>
     </section>
 
-    <div className="my-8 mx-auto">
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
-        crossOrigin="anonymous"
-      ></script>
-
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client="ca-pub-3138057547675144"
-        data-ad-slot="1639159301"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
     <section className="max-w-2xl w-full bg-blue-50 rounded-lg shadow p-6 mb-8">
       <h2 className="text-2xl font-bold text-blue-800 mb-2">
         Children's Privacy
@@ -120,63 +91,25 @@ const PrivacyPage = () => (
       </p>
     </section>
 
-    <div className="my-8 mx-auto">
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
-        crossOrigin="anonymous"
-      ></script>
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-format="autorelaxed"
-        data-ad-client="ca-pub-3138057547675144"
-        data-ad-slot="4956421933"
-      ></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
     <section className="max-w-2xl w-full bg-white/80 rounded-lg shadow p-6 mb-8">
       <h2 className="text-2xl font-bold text-blue-800 mb-2">Disclaimer</h2>
       <p className="text-gray-800 text-lg">
-        This site is not meant to act as an infringement of any kind. All
-        content is intended for informational purposes only. If you believe any
+        This site is not intended to infringe on any rights. All
+        content is for informational purposes only. If you believe any
         content violates your rights, please contact us for prompt resolution.
       </p>
     </section>
 
-    <div className="my-8 mx-auto">
-      <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3138057547675144"
-        crossOrigin="anonymous"
-      ></script>
-
-      <ins
-        className="adsbygoogle"
-        style={{ display: "block" }}
-        data-ad-client="ca-pub-3138057547675144"
-        data-ad-slot="1639159301"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
     <footer className="max-w-2xl w-full text-center mt-8">
       <p className="text-gray-600 text-lg font-medium">
         For questions or concerns about this Privacy Policy, please contact us
-        via our{" "}
+        via our{' '}
         <Link to={"/contact"} className="text-blue-800">
           contact page
         </Link>
         .
       </p>
-      <img
-        src="/certain-news-logo-transparent.png"
-        alt="Certain News Logo"
-        className="mx-auto mt-4 w-20 h-20 object-contain opacity-80"
-      />
+      
     </footer>
   </div>
 );
