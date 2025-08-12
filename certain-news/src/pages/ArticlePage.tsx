@@ -68,7 +68,6 @@ function ArticlePage() {
       ) : article ? (
         <article className="bg-white rounded-xl shadow-lg p-6 md:p-8">
           <div className="mb-6">
-            <span className="chip text-sm">{article.sourceName}</span>
             <span className="text-sm text-gray-500 ml-3">{formatDate(article.publishedAt)}</span>
           </div>
           
@@ -93,20 +92,6 @@ function ArticlePage() {
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
           
-          <div className="mt-10 pt-6 border-t border-gray-200 w-[80vw] md:w-[60vw]">
-            <p className="text-gray-600">
-              This article was sourced from {article.sourceName}. 
-              You can view the original at:{' '}
-              <a 
-                href={article.url} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-purple-700 hover:underline w-[80vw]"
-              >
-                {article.url}
-              </a>
-            </p>
-          </div>
         </article>
       ) : null}
     </div>

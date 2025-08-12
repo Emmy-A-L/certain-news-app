@@ -8,7 +8,6 @@ export type Article = {
     alt: string
   };
   title: string;
-  sourceName: string;
   description: string;
   publishedAt: string;
   content: string;
@@ -34,7 +33,6 @@ const ArticleCard = ({ article }: {article: Article}) => {
 
       <div className="p-4">
         <div className="flex justify-between items-center mb-2">
-          <span className="chip">{article.sourceName}</span>
           <span className="text-xs text-gray-500">
             {format(new Date(article.publishedAt), "MM dd, yyyy")}
           </span>
