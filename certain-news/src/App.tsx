@@ -9,24 +9,26 @@ import AboutPage from './pages/AboutPage';
 import PrivacyPage from './pages/PrivacyPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
+import CookieConsent from './components/CookieConsent';
 
 function App() {
   return (
-    
-      <div className="min-h-screen bg-gray-50">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/category/:category" element={<CategoryPage />} />
-          <Route path="/article/:id" element={<ArticlePage />} />
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='/privacy-policy' element={<PrivacyPage />} />
-          <Route path='/contact' element={<ContactPage />} />
-          <Route path='*' element={<NotFoundPage />} />
-        </Routes>
-        <Footer />
-      </div>
-    
+
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/category/:category" element={<CategoryPage />} />
+        <Route path="/article/:id" element={<ArticlePage />} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/privacy-policy' element={<PrivacyPage />} />
+        <Route path='/contact' element={<ContactPage />} />
+        <Route path='*' element={<NotFoundPage />} />
+      </Routes>
+      <Footer />
+      <CookieConsent />
+    </div>
+
   );
 }
 
